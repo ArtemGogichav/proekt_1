@@ -9,5 +9,12 @@ import { NgFor} from "@angular/common"
   styleUrl: './to-do-list.component.css'
 })
 export class ToDoListComponent {
-  arr = mass
+arr = mass
+  delete(id:number):void{
+    
+    this.arr = this.arr.filter(
+      (el) => el.id !== id
+    )
+    console.log(this.arr)
+  }
 }
